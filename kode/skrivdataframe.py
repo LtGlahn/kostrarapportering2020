@@ -53,15 +53,13 @@ def transponerFylkePerVegkategori( df ):
 
     if 'fylke' in df.columns and 'vegkategori' in df.columns and 'lengde' in df.columns: 
 
-
-        fylkedict =  { x : np.nan  for x in list( df['fylke'])  }
-        vegkatdict = { x : deepcopy( fylkedict ) for x in list( df['vegkategori'] ) }
+        data = []
 
         for junk, row in df.iterrows(): 
-            vegkatdict[row['vegkategori']][row['fylke']] = round( row['lengde'] )
-        df = pd.DataFrame( vegkatdict ).reset_index()
-        df.rename( columns={'Index' : 'Fylke'})
-        df.reset_index()
+            data.append( {'fylke' : row['fylke'], row['vegkategori'] : round( row['lengde'] ), }   )
+
+        df = pd.DataFrame( data )
+        df = df.groupby( ['fylke']).sum().reset_index()
 
     else: 
         print( 'Kan ikke transponere denne dataframen per vegkategori. Kolonner=', df.columns) 
