@@ -33,22 +33,22 @@ def rapport01_gdf2excel( mygdf, filnavn='vegnettkostra.xlsx', sheet_prefiks='', 
 
     t2_transponert = skrivdataframe.transponerFylkePerVegkategori( t2 )
     t2_transponert['Riksveg (E+R)'] = t2_transponert['E'] + t2_transponert['R']
-
     t2_transponert = t2_transponert[['Riksveg (E+R)', 'E', 'R', 'F', 'K', 'P', 'S' ]]
+
+    t4_transponert = skrivdataframe.transponerKommunePerVegkategori( t4 )
 
     # # Skal ha med formattering fra xlsxwriter, men ikke tilgjengelig akkurat nu... 
     # t2.to_excel( filnavn, sheet_name=sheet_prefiks + 'Fylke per vegkategori' )
     # t3.to_excel( filnavn, sheet_name=sheet_prefiks +'per kommune')
     # t4.to_excel( filnavn, sheet_name=' per kommune og vegkategori')
 
-    navneliste = [  sheet_prefiks+'Fylkesvis tabell',
+    navneliste = [  sheet_prefiks+'Tabell fylker',
+                    sheet_prefiks+'Tabell kommuner',
                     sheet_prefiks+'radvis per fylke og vegkat', 
                     sheet_prefiks+'radvis per kommune', 
                     sheet_prefiks+'radvis per kommune og vegkat'  ]
 
-    skrivdataframe.skrivdf2xlsx([t2_transponert, t2, t3, t4], filnavn=filnavn, sheet_name=navneliste, metadata=metadata )
-
-
+    skrivdataframe.skrivdf2xlsx([t2_transponert, t4_transponert, t2, t3, t4], filnavn=filnavn, sheet_name=navneliste, metadata=metadata )
 
 def filtersjekk( mittfilter={} ):
     """

@@ -1,9 +1,9 @@
 | Navn formell bestilling 							|  Nummer i 2019-leveransen    			| Navn 2019-leveransen / NVDB rapporter				| ID nytt system | Status 2020  | Filnavn 2020	|
 |---------------------------------------------------|:-------------------------------------:|---------------------------------------------------|:--------------:|--------------|---------------|
-| Riks-, fylkes-, kommune-, privat- og skogsbilveg 	|   	  	  1 						|  Vegnett - sum hele landet 					 	|  		15001 	 |				|				|
+| Riks-, fylkes-, kommune-, privat- og skogsbilveg 	|   	  	  1 						|  Vegnett - sum hele landet 					 	|  		15001 	 |	OK			| Kostra 01 - Vegnett hele landet.xlsx			|
 | 													|   	  	  2 						| Fylkesveg med motorveger og motortrafikkveger  	| 		15002	 |				|				|
 | Fylkesveg uten fast dekke 						|   	  	  3 						| Fylkesveg uten fast dekke					 		| 		15003	 |				|				|
-| Fylkesveg med 4 felt 								|   	  	  4 						| Fylkesveg med 4 felt 								| 		15004	 |	OK 			| 04 - Fylkesveg med 4 felt.XLSX |
+| Fylkesveg med 4 felt 								|   	  	  4 						| Fylkesveg med 4 felt 								| 		15004	 |	OK 			| Kostra 04 - Fylkesveg med 4 felt.XLSX |
 | Fylkesvei med tillatt aksellast <10 tonn 			|   	  	  5 						| Fylkesveg aksellast mindre enn 10 tonn 			| 		15005	 |				|				|
 | Fylkesvei med begrensning på totalvekt <50 tonn 	|   	  	  6							| Fylkesveg med begrensning på totalvekt mindre enn 50 tonn | 15006	 |				|				|
 | Fylkesveg med fartsgrense 50 eller lavere 		|   	  	  7 						| Fylkesveg med fartsgrense 50 eller lavere 		| 		15007	 |				|				| 
