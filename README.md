@@ -49,7 +49,7 @@ Rapport nummer 25, _"Fylkesveg med kollektivfelt", teller to ganger veglengden d
 | Midtrekkverk på to og trefelts fylkesveger 		|   		 20 						| Fylkesveg_midtrekkverk 2-3 felter 				|		15020	 |				|				|
 | Gang- og sykkelveger (statlig eller fylkeskommunalt ansvar) langs fylkesveg | 22 			| Gang-og sykkelveger 								|		15021 	 |				|				|
 | Gang- og sykkelveg i byer/tettsteder >5000 innbyggere (SOSI format) | 		22  		|  													|			 	 | 				|				|
-| Forsterket midtoppmerking (rumlefelt), på fylkesveg |   		 23 						| Fylkesveg_forsterket vegoppmerking midt 			|		15023	 |				|				|
+| Forsterket midtoppmerking (rumlefelt), på fylkesveg |   		 23 						| Fylkesveg_forsterket vegoppmerking midt 			|		15023	 |	OK			| Kostra 23 - Fylkesveg med forsterket midtoppmerking.xlsx |
 | Støyskjermer og voller langs fylkesvei 			|   		 24 						| Fylkesveg med støyskjerm og voll 					|		15024	 |	OK			| Kostra 24 - Fylkesveg med støyskjerm og voll.xlsx |
 | Kollektivfelt langs fylkesveg 					|   		 25 						| Fylkesveg med kollektivfelt 						|		15025	 |	OK      	| Kostra 25 - Fylkesveg med kollektivfelt.xlsx |
 
