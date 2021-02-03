@@ -10,7 +10,7 @@ Vi tester ut og ettergår et [nytt produksjonssystem](https://www.vegdata.no/pro
 
 Data er _*IKKE*_ kompatible med tidligere rapporter. BEGRUNNELSE 
 
-Lengder langs vegnett er medregnet kryssdeler, men ikke sideanlegg, og teller ikke med vegnett med _adskilte løp = "Mot"_. 
+Lengder langs vegnett er medregnet kryssdeler, men ikke sideanlegg, og teller ikke med vegnett med _adskilte løp = "Mot"_ eller konnekteringslenker.  
 
 Bortsett fra rapport nummer 1, _"Vegnett hele landet", som har lengde i kilometer, er alle lengder oppgitt i meter. 
 
@@ -44,12 +44,12 @@ Rapport nummer 25, _"Fylkesveg med kollektivfelt", teller to ganger veglengden d
 | Tunneler på fylkesveg med lengde 500 m og over 	|   		 15 						| Fylkesveg med tunneler over 500 meter 			| 		15015	 |				|				|
 | Underganger på fylkesveg med høydebegrensning lavere enn 4 m | 16 						| Fylkesveg_tunneler med høyde lavere enn 4 meter 	| 		15016	 |				|				|
 | Vegbruer på fylkesveg 							|   		 17 						| Fylkesveg_antall bruer 							| 		15017	 |				|				|
-| Bruer på fylkesvei med tillatt aksellast <10 tonn |   		 18 						|  Fylkesveg_bruer under 10 tonn 					| 		15018	 |				|				|
+| Bruer på fylkesvei med tillatt aksellast <10 tonn |   		 18 						| Fylkesveg_bruer under 10 tonn 					| 		15018	 |				|				|
 | Bruer på fylkesvei med høydebegrensning <4m 		|   		 19 						| Fylkesveg_bruer_høyde mindre enn 4 meter 			| 		15019	 |				|				|
 | Midtrekkverk på to og trefelts fylkesveger 		|   		 20 						| Fylkesveg_midtrekkverk 2-3 felter 				|		15020	 |				|				|
 | Gang- og sykkelveger (statlig eller fylkeskommunalt ansvar) langs fylkesveg | 22 			| Gang-og sykkelveger 								|		15021 	 |				|				|
 | Gang- og sykkelveg i byer/tettsteder >5000 innbyggere (SOSI format) | 		22  		|  													|			 	 | 				|				|
 | Forsterket midtoppmerking (rumlefelt), på fylkesveg |   		 23 						| Fylkesveg_forsterket vegoppmerking midt 			|		15023	 |				|				|
-| Støyskjermer og voller langs fylkesvei 			|   		 24 						| Fylkesveg med støyskjerm og voll 					|		15024	 |				|				|
+| Støyskjermer og voller langs fylkesvei 			|   		 24 						| Fylkesveg med støyskjerm og voll 					|		15024	 |	OK			| Kostra 24 - Fylkesveg med støyskjerm og voll.xlsx |
 | Kollektivfelt langs fylkesveg 					|   		 25 						| Fylkesveg med kollektivfelt 						|		15025	 |	OK      	| Kostra 25 - Fylkesveg med kollektivfelt.xlsx |
 

@@ -71,6 +71,19 @@ def harViKryssSystem( vegsystemreferanse ):
     return svar 
 
 
+def kostraFagdataFilter( mittfilter={}  ): 
+    """
+    Returnerer mal for filter for NVDB fagdata til KOSTRA-rapport 
+    """
+
+    if not 'vegsystemreferanse' in mittfilter: 
+        mittfilter['vegsystemreferanse']       = 'Fv'
+
+    if not 'tidspunkt' in mittfilter: 
+        mittfilter['tidspunkt']       = '2020-12-31'
+
+    return mittfilter
+
 def filtersjekk( mittfilter={} ):
     """
     Beriker et filter med vegnett-spesifikke standardverdier for kostra-søk 
