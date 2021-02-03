@@ -45,8 +45,8 @@ Rapport nummer 25, _"Fylkesveg med kollektivfelt", teller to ganger veglengden d
 | Underganger på fylkesveg med høydebegrensning lavere enn 4 m | 16 						| Fylkesveg_tunneler med høyde lavere enn 4 meter 	| 		15016	 |				|				|
 | Vegbruer på fylkesveg 							|   		 17 						| Fylkesveg_antall bruer 							| 		15017	 |				|				|
 | Bruer på fylkesvei med tillatt aksellast <10 tonn |   		 18 						| Fylkesveg_bruer under 10 tonn 					| 		15018	 |				|				|
-| Bruer på fylkesvei med høydebegrensning <4m 		|   		 19 						| Fylkesveg_bruer_høyde mindre enn 4 meter 			| 		15019	 |				|				|
-| Midtrekkverk på to og trefelts fylkesveger 		|   		 20 						| Fylkesveg_midtrekkverk 2-3 felter 				|		15020	 |	OK			| 'Kostra 19 - Bruer hoyde mindre enn 4m.xlsx' |
+| Bruer på fylkesvei med høydebegrensning <4m 		|   		 19 						| Fylkesveg_bruer_høyde mindre enn 4 meter 			| 		15019	 |	OK			| Kostra 19 - Bruer hoyde mindre enn 4m.xlsx |
+| Midtrekkverk på to og trefelts fylkesveger 		|   		 20 						| Fylkesveg_midtrekkverk 2-3 felter 				|		15020	 |				|  |
 | Gang- og sykkelveger (statlig eller fylkeskommunalt ansvar) langs fylkesveg | 21 			| Gang-og sykkelveger 								|		15021 	 |	OK			| Kostra 21 gang og sykkelveg.xlsx |
 | Gang- og sykkelveg i byer/tettsteder >5000 innbyggere (SOSI format) | 		22  		|  													|			 	 | 				|				|
 | Forsterket midtoppmerking (rumlefelt), på fylkesveg |   		 23 						| Fylkesveg_forsterket vegoppmerking midt 			|		15023	 |	OK			| Kostra 23 - Fylkesveg med forsterket midtoppmerking.xlsx |
