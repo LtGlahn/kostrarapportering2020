@@ -226,7 +226,7 @@ def vegnett2gdf( mittfilter={}):
         return None 
 
 
-def firefeltrapport( mittfilter={}): 
+def firefeltrapport( mittfilter={}, felttype='firefelt'): 
     """
     Finner alle firefeltsveger i Norge, evt innafor angitt søkekriterie 
 
@@ -238,6 +238,8 @@ def firefeltrapport( mittfilter={}):
     KEYWORDS:
         mittfilter: Dictionary med søkefilter 
 
+        felttype: string, angir felttype, for eksempel 'K' for kollektivfelt. Default er 'firefelt'
+
     RETURNS
         geodataframe med resultatet
     """
@@ -248,11 +250,11 @@ def firefeltrapport( mittfilter={}):
     if not 'vegsystemreferanse' in mittfilter.keys(): 
         mittfilter['vegsystemreferanse'] = 'Ev,Rv,Fv,Kv,Sv,Pv'
 
-    if not 'kryssystem' in mittfilter.keys():
-        mittfilter['kryssystem'] = 'false' 
+    # if not 'kryssystem' in mittfilter.keys():
+    #     mittfilter['kryssystem'] = 'false' 
 
-    if not 'sideanlegg' in mittfilter.keys():
-        mittfilter['sideanlegg'] = 'false' 
+    # if not 'sideanlegg' in mittfilter.keys():
+    #     mittfilter['sideanlegg'] = 'false' 
 
     v.filter( mittfilter )
     
@@ -263,13 +265,16 @@ def firefeltrapport( mittfilter={}):
     vegsegment = v.nesteForekomst()
     while vegsegment: 
 
-        if sjekkfelt( vegsegment, felttype='firefelt'):
+        felter = sjekkfelt( vegsegment, felttype=felttype)
+        if felter:
             vegsegment['feltoversikt']  = ','.join( vegsegment['feltoversikt'] )
             vegsegment['geometri']      = vegsegment['geometri']['wkt']
             vegsegment['vref']          = vegsegment['vegsystemreferanse']['kortform']
             vegsegment['vegnr']         = vegsegment['vref'].split()[0]
             vegsegment['vegkategori']   = vegsegment['vref'][0]
             vegsegment['adskilte løp']  = vegsegment['vegsystemreferanse']['strekning']['adskilte_løp']
+            if felttype == 'K':
+                vegsegment['kollektivfelt_antsider'] = felter 
 
             data.append( vegsegment )
 
@@ -331,6 +336,17 @@ def sjekkfelt( vegsegment, felttype='firefelt' ):
 
 
         return svar 
+    elif felttype in ['K']: 
+        if 'feltoversikt' in vegsegment.keys() and 'detaljnivå' in vegsegment.keys() and 'Vegtrase' in vegsegment['detaljnivå']: 
+            kjfelt = set( filtrerfeltoversikt( vegsegment['feltoversikt'], mittfilter=['K']) )
+            if len( kjfelt ) == 1: 
+                svar = 1
+            elif len( kjfelt ) > 1: 
+                svar = 2 
+                        # Spesialregel for å telle tosidige retninger 
+
+        return svar
+
     else: 
         raise NotImplementedError('Sjekkfelt: Sjekk for felt av type: ' + felttype + 'er ikke implementert (ennå)' )
         
