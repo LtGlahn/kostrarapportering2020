@@ -28,6 +28,17 @@ def records2gpkg( minliste, filnavn, lagnavn ):
     Forutsetning: Alle records har et "geometri"-element med WKT-streng og inneholder ingen lister. 
     Vi tester for en del kjente snublefeller mhp disse forutsetningene, men ikke alle. 
     """
+
+    minGdf = records2gdf( minliste )
+    minGdf.to_file( filnavn, layer=lagnavn, driver="GPKG")  
+
+def records2gdf(minliste ):
+    """
+    Tar en liste med records (dictionaries) a la dem vi får fra nvdbapiv3.to_records() og lager en geodataframe
+
+    Forutsetning: Alle records har et "geometri"-element med WKT-streng og inneholder ingen lister. 
+    Vi tester for en del kjente snublefeller mhp disse forutsetningene, men ikke alle. 
+    """
     if len( minliste ) == 0: 
         raise ValueError( 'nvdbgeotrics.records2gpkg: Tom liste som inngangsverdi, funker dårlig')
 
@@ -49,8 +60,7 @@ def records2gpkg( minliste, filnavn, lagnavn ):
         minGdf.drop( 'vegsegmenter', 1, inplace=True)
 
     minGdf.drop( 'geometri', 1, inplace=True)
-    minGdf.to_file( filnavn, layer=lagnavn, driver="GPKG")  
-
+    return minGdf
 
 
 def nvdb2gpkg( objekttyper, filnavn='datadump', mittfilter=None, vegnett=True, vegsegmenter=False, geometri=True):
