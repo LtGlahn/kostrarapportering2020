@@ -112,4 +112,6 @@ datadumps/
 figures/
 _map.html
 *.ipynb
+*.gpkg-shm
+*.gpkg-wal
 *.gpkg
