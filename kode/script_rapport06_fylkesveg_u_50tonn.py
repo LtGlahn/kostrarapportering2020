@@ -43,13 +43,16 @@ sok = nvdbapiv3.nvdbFagdata( 904 )
 sok.filter( mittfilter )
 myGdf = nvdbgeotricks.records2gdf( sok.to_records( ) ) 
 
+myGdf_G = myGdf[ myGdf['trafikantgruppe'] == 'G'].copy()
+myGdf = myGdf[ myGdf['trafikantgruppe'] == 'K']
+
 # For debugging 
 lengde = myGdf.groupby( ['fylke', 'vegkategori', 'nummer' ]).agg( {'segmentlengde' : 'sum' } ).reset_index()
 lengde['Veg'] = 'FV' + lengde['nummer'].astype(str)
 lengde['Lengde (m)'] = lengde['segmentlengde']
 lengde = lengde[[ 'fylke', 'Veg', 'Lengde (m)']]
 
-telling = myGdf.groupby( ['fylke' ]).agg( { 'segmentlengde' : 'sum'} ).reset_index()  
+telling = myGdf.groupby( ['fylke' ]).agg( { 'segmentlengde' : 'sum'} ).astype(int).reset_index()  
 telling.rename( columns={ 'segmentlengde' : 'Lengde (m)' }, inplace=True)
 
 skrivdataframe.skrivdf2xlsx( telling, '../../output/Kostra 06 - Fylkesveg totalvekt u 50t.xlsx', sheet_name='Fv totalvekt u 50t', metadata=mittfilter)
