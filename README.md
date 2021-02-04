@@ -25,7 +25,7 @@ Bortsett fra rapport nummer 1, _"Vegnett hele landet", som har lengde i kilomete
 | Fylkesveg uten fast dekke 						|   	  	  3 						| Fylkesveg uten fast dekke					 		| 		15003	 |	OK          | Kostra 03 - Fylkesveg uten fast dekke.XLSX |
 | Fylkesveg med 4 felt 								|   	  	  4 						| Fylkesveg med 4 felt 								| 		15004	 |	OK 			| Kostra 04 - Fylkesveg med 4 felt.XLSX |
 | Fylkesvei med tillatt aksellast <10 tonn 			|   	  	  5 						| Fylkesveg aksellast mindre enn 10 tonn 			| 		15005	 |	OK			| Kostra 05 - Fylkesveg aksellast u 10t.xlsx |
-| Fylkesvei med begrensning på totalvekt <50 tonn 	|   	  	  6							| Fylkesveg med begrensning på totalvekt mindre enn 50 tonn | 15006	 |				|				|
+| Fylkesvei med begrensning på totalvekt <50 tonn 	|   	  	  6							| Fylkesveg med begrensning på totalvekt mindre enn 50 tonn | 15006	 |	OK			| Kostra 06 - Fylkesveg totalvekt u 50t.xlsx |
 | Fylkesveg med fartsgrense 50 eller lavere 		|   	  	  7 						| Fylkesveg med fartsgrense 50 eller lavere 		| 		15007	 |				|				| 
 | Fylkesvei med begrensning på kj.t.lengde <19,5m 	|   	  	  8 						| Fylkesveg med begrensning på kjøretøylengde mindre enn 19,5 meter | 15008 |		|				|
 | Tunneler på fylkesveg med høydebegrensning <4m 	|   	  	  9 						| Fylkesveg undergang med høyde mindre enn 4 meter 	| 		15009	 |				|				|
