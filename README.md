@@ -52,15 +52,15 @@ Bortsett fra rapport nummer 1, _"Vegnett hele landet", som har lengde i kilomete
 
 ### Kostra 01 - Vegnett hele landet.xlsx			
 
-Rapport nummer 1, _"Vegnett hele landet", har lengde i kilometer. 
+Rapport nummer 1, _"Vegnett hele landet", har lengde i kilometer. Her teller vi ikke gang- og sykkelveger, kun trafikantgruppe K (kjørende). Av typeVeg så teller vi med verdiene _kanalisertVeg, enkelBilveg, rampe, rundkjøring_ og _gatetun_ Vi teller ikke med sideanlegg, strekninger med adskilte løp=Mot og konnekteringslenker. Derimot teller vi alle kryssdeler. 
 
 ### Kostra 02 - Fylkesveg med motorveg og motortrafikkveg.xlsx
 
-
+Her teller vi TO BE WRITTEN 
 
 ### Kostra 03 - Fylkesveg uten fast dekke.XLSX 
 
-
+Her teller vi opp objekttypen Vegdekke (241) langs fylkesveg, og skiller tall for vanlig bilveg (trafikantgruppe K) fra tall for gående og syklende (trafikantgruppe G) i egne faner. Vi teller ikke med sideanlegg og adskilte løp=Mot. 
 
 ### Kostra 04 - Fylkesveg med 4 felt.XLSX 
 
