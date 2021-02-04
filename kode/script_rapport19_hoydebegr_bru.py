@@ -12,9 +12,9 @@ import nvdbapiv3
 import nvdbgeotricks
 
 t0 = datetime.now()
-mittfilter = lastnedvegnett.kostraFagdataFilter( { 'overlapp' : '591(5277 < 4 AND (5270=8168 OR 5270=8149))', 'egenskap' : '1263=7304'} )
-# mittfilter = lastnedvegnett.kostraFagdataFilter( { 'egenskap' : ' 5277 < 4 AND ( 5270=8168 OR 5270=8149 ) ', 'overlapp' : '60(1263=7304)'} )
-# mittfilter = lastnedvegnett.kostraFagdataFilter( { 'overlapp' : '591(5277 < 4 AND ( 5270=8168 OR 5270=8149 ) ) ', 'egenskap' : '1263=7304'} )
+mittfilter = lastnedvegnett.kostraFagdataFilter( mittfilter={ 'overlapp' : '591(5277 < 4 AND (5270=8168 OR 5270=8149))', 'egenskap' : '1263=7304'} )
+# mittfilter = lastnedvegnett.kostraFagdataFilter( mittfilter={ 'egenskap' : ' 5277 < 4 AND ( 5270=8168 OR 5270=8149 ) ', 'overlapp' : '60(1263=7304)'} )
+# mittfilter = lastnedvegnett.kostraFagdataFilter( mittfilter={ 'overlapp' : '591(5277 < 4 AND ( 5270=8168 OR 5270=8149 ) ) ', 'egenskap' : '1263=7304'} )
 sok = nvdbapiv3.nvdbFagdata( 60 )
 sok.filter( mittfilter  ) 
 bruGdf = nvdbgeotricks.records2gdf( sok.to_records( ) )
@@ -31,6 +31,6 @@ telling = bru_alleharLengde.groupby( ['fylke' ]).agg( { 'nvdbId': 'nunique', 'Le
 telling.rename( columns={ 'nvdbId' : 'Antall', 'lengde' : 'Lengde (m)' }, inplace=True )
 
 
-skrivdataframe.skrivdf2xlsx( telling, '../../junk/Kostra 19 - Bruer hoyde mindre enn 4m.xlsx', sheet_name='Bru høydebegrensning under 4m', metadata=mittfilter)
+skrivdataframe.skrivdf2xlsx( telling, '../../output/Kostra 19 - Bruer hoyde mindre enn 4m.xlsx', sheet_name='Bru høydebegrensning under 4m', metadata=mittfilter)
 
 tidsbruk = datetime.now() - t0 

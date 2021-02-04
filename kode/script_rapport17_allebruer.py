@@ -16,7 +16,7 @@ t0 = datetime.now()
 # egenskapfilter_bk904_u10t = 'egenskap(10901)=18186 OR egenskap(10901)=18187 OR egenskap(10901)=18188 OR egenskap(10901)=18189 OR egenskap(10901)=18190'
 # overlappfilter  = '904(10901=18186 OR 10901=18187 OR 10901=18188 OR 10901=18189 OR 10901=18190)'
 
-mittfilter = lastnedvegnett.kostraFagdataFilter( { 'egenskap' : '1263=7304 OR 1263=7305'  } )
+mittfilter = lastnedvegnett.kostraFagdataFilter( mittfilter={ 'egenskap' : '1263=7304 OR 1263=7305'  } )
 sok = nvdbapiv3.nvdbFagdata( 60 )
 sok.filter( mittfilter  ) 
 bruGdf = nvdbgeotricks.records2gdf( sok.to_records( ) )
@@ -30,6 +30,6 @@ bru_alleharLengde = pd.concat( [ bruGdf_medLengde, bruGdf_uLengde ]  )
 telling = bru_alleharLengde.groupby( ['fylke' ]).agg( { 'nvdbId': 'nunique', 'Lengde' : 'sum'} ).reset_index()
 telling.rename( columns={ 'nvdbId' : 'Antall', 'lengde' : 'Lengde (m)' }, inplace=True )
 
-skrivdataframe.skrivdf2xlsx( telling, '../../junk/Kostra 17 - Bruer fylkesveg.xlsx', sheet_name='Bruer fylkesveg', metadata=mittfilter)
+skrivdataframe.skrivdf2xlsx( telling, '../../output/Kostra 17 - Bruer fylkesveg.xlsx', sheet_name='Bruer fylkesveg', metadata=mittfilter)
 
 tidsbruk = datetime.now() - t0 
