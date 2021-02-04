@@ -26,16 +26,16 @@ Bortsett fra rapport nummer 1, _"Vegnett hele landet", som har lengde i kilomete
 | Fylkesveg med 4 felt 								|   	  	  4 						| Fylkesveg med 4 felt 								| 		15004	 |	OK 			| Kostra 04 - Fylkesveg med 4 felt.XLSX |
 | Fylkesvei med tillatt aksellast <10 tonn 			|   	  	  5 						| Fylkesveg aksellast mindre enn 10 tonn 			| 		15005	 |	OK			| Kostra 05 - Fylkesveg aksellast u 10t.xlsx |
 | Fylkesvei med begrensning på totalvekt <50 tonn 	|   	  	  6							| Fylkesveg med begrensning på totalvekt mindre enn 50 tonn | 15006	 |	OK			| Kostra 06 - Fylkesveg totalvekt u 50t.xlsx |
-| Fylkesveg med fartsgrense 50 eller lavere 		|   	  	  7 						| Fylkesveg med fartsgrense 50 eller lavere 		| 		15007	 |				|				| 
-| Fylkesvei med begrensning på kj.t.lengde <19,5m 	|   	  	  8 						| Fylkesveg med begrensning på kjøretøylengde mindre enn 19,5 meter | 15008 |		|				|
-| Tunneler på fylkesveg med høydebegrensning <4m 	|   	  	  9 						| Fylkesveg undergang med høyde mindre enn 4 meter 	| 		15009	 |				|				|
+| Fylkesveg med fartsgrense 50 eller lavere 		|   	  	  7 						| Fylkesveg med fartsgrense 50 eller lavere 		| 		15007	 |	OK			| Kostra 07 - Fylkesveg maks 50kmt.xlsx | 
+| Fylkesvei med begrensning på kj.t.lengde <19,5m 	|   	  	  8 						| Fylkesveg med begrensning på kjøretøylengde mindre enn 19,5 meter | 15008 | OK	| Kostra 08 - maks lengde u 19m.xlsx |
+| Underganger på fylkesveg med høydebegrensning lavere enn 4 m 	| 9              			| Fylkesveg undergang med høyde mindre enn 4 meter 	| 		15009	 |	OK			| Kostra 09 - Undergang lavere enn 4m.xlsx |
 | Fylkesveg med dårlig eller svært dårlig dekketilstand | 	  	 10 						| N/A  _(separat leveranse)_						|  		 -		 |	-			|	-			|
 | Fylkesveg uten fast dekke >5000 ÅDT 				|			 11 						| Fylkesveg uten fast dekke over 5000 ÅDT 			| 		15011	 |	OK			| Kostra 11 - Fylkesveg uten fast dekke AADT over 5000.xlsx |
 | Fylkesveg i alt >5000 ÅDT 						|  			 12 						| Fylkesveg i alt mer enn 5000 ÅDT 					|		15012 	 |	OK			| Kostra 12 - Fylkesveg AADT over 5000.xlsx |
 | Tunneler på fylkesveg. Lengde 					|   		 13 						| Fylkesveg med lengde tunnel 						| 		15013	 |	OK			| Kostra 13 og 14 - tunnell fylkesveg.xlsx |
 | Tunneler på fylkesveg. Antall 					|   		 14 						| Fylkesveg med antall tunnel 						| 		15014	 |	OK (samme som  13)	|  Kostra 13 og 14 - tunnell fylkesveg.xlsx |
 | Tunneler på fylkesveg med lengde 500 m og over 	|   		 15 						| Fylkesveg med tunneler over 500 meter 			| 		15015	 |	OK			| Kostra 15 - tunnell fylkesveg lengre enn 500m.xlsx |
-| Underganger på fylkesveg med høydebegrensning lavere enn 4 m | 16 						| Fylkesveg_tunneler med høyde lavere enn 4 meter 	| 		15016	 |	OK			| Kostra 16 - tunnell u 4m.xlsx    |
+| Tunneler på fylkesveg med høydebegrensning <4m    |           16				            | Fylkesveg_tunneler med høyde lavere enn 4 meter 	| 		15016	 |	OK			| Kostra 16 - tunnell u 4m.xlsx    |
 | Vegbruer på fylkesveg 							|   		 17 						| Fylkesveg_antall bruer 							| 		15017	 |	OK			| Kostra 17 - Bruer fylkesveg.xlsx |
 | Bruer på fylkesvei med tillatt aksellast <10 tonn |   		 18 						| Fylkesveg_bruer under 10 tonn 					| 		15018	 |	OK			| Kostra 18 - Bruer under 10t.xlsx |
 | Bruer på fylkesvei med høydebegrensning <4m 		|   		 19 						| Fylkesveg_bruer_høyde mindre enn 4 meter 			| 		15019	 |	OK			| Kostra 19 - Bruer hoyde mindre enn 4m.xlsx |
@@ -60,7 +60,7 @@ Her teller vi TO BE WRITTEN
 
 ### Kostra 03 - Fylkesveg uten fast dekke.XLSX 
 
-Her teller vi opp objekttypen Vegdekke (241) langs fylkesveg, og skiller tall for vanlig bilveg (trafikantgruppe K) fra tall for gående og syklende (trafikantgruppe G) i egne faner. Vi teller ikke med sideanlegg og adskilte løp=Mot. 
+Her finner vi lengden av objekttypen _Vegdekke (241)_ langs fylkesveg med egenskapfilteret _massetype = Grus_, og skiller tall for vanlig bilveg (trafikantgruppe K) fra tall for gående og syklende (trafikantgruppe G) i egne faner. Vi teller ikke med sideanlegg og _adskilte løp = Mot_. 
 
 ### Kostra 04 - Fylkesveg med 4 felt.XLSX 
 
@@ -81,14 +81,14 @@ Her finner vi lengden av _Bruksklasse, normaltransport (904)_ langs fylkesveg me
 Her finner vi lengden av _Fartsgrense (105)_ langs fylkesveg med de egenskapverdiene som tilsier maks kjøretøylengde kortere enn 1.5 meter, for trafikantgruppe _kjørende_. Vi tar ikke med data for sideanlegg og _adskilte løp = Mot_. 
 
 
-### Kostra 08
+### Kostra 08 Fylkesveg med begrensing på kjøretøylengde mindre enn 19,5 meter
 
 Her finner vi lengden av _Bruksklasse, normaltransport (904)_ langs fylkesveg med de egenskapverdiene som tilsier maks kjøretøylengde kortere enn 19.5 meter, for trafikantgruppe _kjørende_. Vi tar ikke med data for sideanlegg og _adskilte løp = Mot_. 
 
 
-### Kostra 09
+### Kostra 09 Undergang 
 
-
+Her teller vi antall av _Høydebegrensning (591)_ med egenskapsfilteret _Type Hinder = Undergang/bru_ langs fylkesveg.
 
 ### Kostra 10
 
