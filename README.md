@@ -24,7 +24,7 @@ Bortsett fra rapport nummer 1, _"Vegnett hele landet", som har lengde i kilomete
 | 													|   	  	  2 						| Fylkesveg med motorveger og motortrafikkveger  	| 		15002	 |	OK			| Kostra 02 - Fylkesveg med motorveg og motortrafikkveg.xlsx |
 | Fylkesveg uten fast dekke 						|   	  	  3 						| Fylkesveg uten fast dekke					 		| 		15003	 |	OK          | Kostra 03 - Fylkesveg uten fast dekke.XLSX |
 | Fylkesveg med 4 felt 								|   	  	  4 						| Fylkesveg med 4 felt 								| 		15004	 |	OK 			| Kostra 04 - Fylkesveg med 4 felt.XLSX |
-| Fylkesvei med tillatt aksellast <10 tonn 			|   	  	  5 						| Fylkesveg aksellast mindre enn 10 tonn 			| 		15005	 |				|				|
+| Fylkesvei med tillatt aksellast <10 tonn 			|   	  	  5 						| Fylkesveg aksellast mindre enn 10 tonn 			| 		15005	 |	OK			| Kostra 05 - Fylkesveg aksellast u 10t.xlsx |
 | Fylkesvei med begrensning på totalvekt <50 tonn 	|   	  	  6							| Fylkesveg med begrensning på totalvekt mindre enn 50 tonn | 15006	 |				|				|
 | Fylkesveg med fartsgrense 50 eller lavere 		|   	  	  7 						| Fylkesveg med fartsgrense 50 eller lavere 		| 		15007	 |				|				| 
 | Fylkesvei med begrensning på kj.t.lengde <19,5m 	|   	  	  8 						| Fylkesveg med begrensning på kjøretøylengde mindre enn 19,5 meter | 15008 |		|				|
@@ -138,15 +138,17 @@ Henter bruer av typen vegbru som overlapper med brukslasse, normaltransport som 
 
 ### Kostra 22 - sykkelveger_fylkesveg.geojson 
 
+Vi har dessverre ikke fått på plass alt som trengs for å lettvint produsere sosifiler med det nye vegreferansesystemet. Vi betrakter geojson som et lettvint alternativ i mellomtiden. Vi kan også levere på andre formater. 
 
+Den opprinnelige bestillingen er "gang- og sykkelveger innenfor tettsteder med mer enn 5000 innbyggere". Ettersom tettsteder er et datasett som ajourholdes av SSB ser vi det som mest hensiktsmessig at SSB selv gjør analysen med å finne hvor stor del av gang- og sykkelvegene som er innafor disse tettstedene. Dette er en triviell geografisk analyse. Hvis dette ikke er tilfredsstillende så ta kontakt, så skal vi ordne det. I så fall må vi få oversendt ferske data for tettsteder, evt få avklart at vi skal bruke siste gjeldende. Så vidt vi kan se, er de siste offentlige tilgjengelige tettsted-definisjonene per 31.12.2019. 
 
 ### Kostra 23 - Fylkesveg med forsterket midtoppmerking.xlsx 
 
-
+Dette er telling av objekttypen "Vegoppmerking, forsterket" med egenskapsfilteret _Type = Forsterket midtoppmerking_. 
 
 ### Kostra 24 - Fylkesveg med støyskjerm og voll.xlsx 
 
-
+Henter skjerm med egenskapsfilter _Bruksområde = Stæyskjerm_ og Voll med egenskapfilter _Bruksområde = Støyskjerming_. 
 
 
 ### Kostra 25 - Fylkesveg med kollektivfelt

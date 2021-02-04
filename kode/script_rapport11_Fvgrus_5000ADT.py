@@ -11,6 +11,7 @@ import skrivdataframe
 import nvdbapiv3
 import nvdbgeotricks
 
+
 t0 = datetime.now()
 
 mittfilter = lastnedvegnett.kostraFagdataFilter(  )
@@ -40,6 +41,7 @@ lengde['Lengde (m)'] = lengde['segmentlengde']
 lengde = lengde[[ 'fylke', 'Veg', 'Lengde (m)']]
 
 telling = myGdf.groupby( ['fylke' ]).agg( { 'segmentlengde' : 'sum'} ).reset_index()  
+telling.rename( columns={ 'segmentlengde' : 'Lengde (m)' }, inplace=True)
 
 skrivdataframe.skrivdf2xlsx( telling, '../../output/Kostra 11 - Fylkesveg uten fast dekke ÅDT over 5000.xlsx', sheet_name='Fv grus over 5000ÅDT', metadata=mittfilter)
 
