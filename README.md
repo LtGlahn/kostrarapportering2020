@@ -30,8 +30,8 @@ Bortsett fra rapport nummer 1, _"Vegnett hele landet", som har lengde i kilomete
 | Fylkesvei med begrensning på kj.t.lengde <19,5m 	|   	  	  8 						| Fylkesveg med begrensning på kjøretøylengde mindre enn 19,5 meter | 15008 |		|				|
 | Tunneler på fylkesveg med høydebegrensning <4m 	|   	  	  9 						| Fylkesveg undergang med høyde mindre enn 4 meter 	| 		15009	 |				|				|
 | Fylkesveg med dårlig eller svært dårlig dekketilstand | 	  	 10 						| N/A  _(separat leveranse)_						|  		 -		 |	-			|	-			|
-| Fylkesveg uten fast dekke >5000 ÅDT 				|			 11 						| Fylkesveg uten fast dekke over 5000 ÅDT 			| 		15011	 |				|				|
-| Fylkesveg i alt >5000 ÅDT 						|  			 12 						| Fylkesveg i alt mer enn 5000 ÅDT 					|		15012 	 |				|				|
+| Fylkesveg uten fast dekke >5000 ÅDT 				|			 11 						| Fylkesveg uten fast dekke over 5000 ÅDT 			| 		15011	 |	OK			| Kostra 11 - Fylkesveg uten fast dekke AADT over 5000.xlsx |
+| Fylkesveg i alt >5000 ÅDT 						|  			 12 						| Fylkesveg i alt mer enn 5000 ÅDT 					|		15012 	 |	OK			| Kostra 12 - Fylkesveg AADT over 5000.xlsx |
 | Tunneler på fylkesveg. Lengde 					|   		 13 						| Fylkesveg med lengde tunnel 						| 		15013	 |	OK			| Kostra 13 og 14 - tunnell fylkesveg.xlsx |
 | Tunneler på fylkesveg. Antall 					|   		 14 						| Fylkesveg med antall tunnel 						| 		15014	 |	OK (samme som  13)	|  Kostra 13 og 14 - tunnell fylkesveg.xlsx |
 | Tunneler på fylkesveg med lengde 500 m og over 	|   		 15 						| Fylkesveg med tunneler over 500 meter 			| 		15015	 |	OK			| Kostra 15 - tunnell fylkesveg lengre enn 500m.xlsx |

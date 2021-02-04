@@ -28,6 +28,6 @@ lengde = lengde[[ 'fylke', 'Veg', 'Lengde (m)']]
 
 telling = mydf.groupby( ['fylke' ]).agg( { 'segmentlengde' : 'sum'} ).reset_index()  
 
-skrivdataframe.skrivdf2xlsx( telling, '../../output/Kostra 03 - Fylkesveg uten fast dekke.xlsx', sheet_name='Fv u fast dekkel', metadata=mittfilter)
+skrivdataframe.skrivdf2xlsx( telling, '../../output/Kostra 03 - Fylkesveg uten fast dekke.xlsx', sheet_name='Fv u fast dekke', metadata=mittfilter)
 
 tidsbruk = datetime.now() - t0 
