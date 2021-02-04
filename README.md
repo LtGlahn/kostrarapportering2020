@@ -32,18 +32,18 @@ Bortsett fra rapport nummer 1, _"Vegnett hele landet", som har lengde i kilomete
 | Fylkesveg med dårlig eller svært dårlig dekketilstand | 	  	 10 						| N/A  _(separat leveranse)_						|  		 -		 |	-			|	-			|
 | Fylkesveg uten fast dekke >5000 ÅDT 				|			 11 						| Fylkesveg uten fast dekke over 5000 ÅDT 			| 		15011	 |				|				|
 | Fylkesveg i alt >5000 ÅDT 						|  			 12 						| Fylkesveg i alt mer enn 5000 ÅDT 					|		15012 	 |				|				|
-| Tunneler på fylkesveg. Lengde 					|   		 13 						| Fylkesveg med lengde tunnel 						| 		15013	 |				|				|
-| Tunneler på fylkesveg. Antall 					|   		 14 						| Fylkesveg med antall tunnel 						| 		15014	 |				|				|
-| Tunneler på fylkesveg med lengde 500 m og over 	|   		 15 						| Fylkesveg med tunneler over 500 meter 			| 		15015	 |				| 			|
-| Underganger på fylkesveg med høydebegrensning lavere enn 4 m | 16 						| Fylkesveg_tunneler med høyde lavere enn 4 meter 	| 		15016	 |				| Kostra 16 - tunnell u 4m.xlsx    |
-| Vegbruer på fylkesveg 							|   		 17 						| Fylkesveg_antall bruer 							| 		15017	 |				| Kostra 17 - Bruer fylkesveg.xlsx |
+| Tunneler på fylkesveg. Lengde 					|   		 13 						| Fylkesveg med lengde tunnel 						| 		15013	 |	OK			| Kostra 13 og 14 - tunnell fylkesveg.xlsx |
+| Tunneler på fylkesveg. Antall 					|   		 14 						| Fylkesveg med antall tunnel 						| 		15014	 |	OK (samme som  13)	|  Kostra 13 og 14 - tunnell fylkesveg.xlsx |
+| Tunneler på fylkesveg med lengde 500 m og over 	|   		 15 						| Fylkesveg med tunneler over 500 meter 			| 		15015	 |	OK			| Kostra 15 - tunnell fylkesveg lengre enn 500m.xlsx |
+| Underganger på fylkesveg med høydebegrensning lavere enn 4 m | 16 						| Fylkesveg_tunneler med høyde lavere enn 4 meter 	| 		15016	 |	OK			| Kostra 16 - tunnell u 4m.xlsx    |
+| Vegbruer på fylkesveg 							|   		 17 						| Fylkesveg_antall bruer 							| 		15017	 |	OK			| Kostra 17 - Bruer fylkesveg.xlsx |
 | Bruer på fylkesvei med tillatt aksellast <10 tonn |   		 18 						| Fylkesveg_bruer under 10 tonn 					| 		15018	 |	OK			| Kostra 18 - Bruer under 10t.xlsx |
 | Bruer på fylkesvei med høydebegrensning <4m 		|   		 19 						| Fylkesveg_bruer_høyde mindre enn 4 meter 			| 		15019	 |	OK			| Kostra 19 - Bruer hoyde mindre enn 4m.xlsx |
 | Midtrekkverk på to og trefelts fylkesveger 		|   		 20 						| Fylkesveg_midtrekkverk 2-3 felter 				|		15020	 |				|  |
 | Gang- og sykkelveger (statlig eller fylkeskommunalt ansvar) langs fylkesveg | 21 			| Gang-og sykkelveger 								|		15021 	 |	OK			| Kostra 21 gang og sykkelveg.xlsx |
 | Gang- og sykkelveg i byer/tettsteder >5000 innbyggere (SOSI format) | 		22  		|  													|			 	 | Ikke sosi, men geojson | Kostra 22 - sykkelveger_fylkesveg.zip |
 | Forsterket midtoppmerking (rumlefelt), på fylkesveg |   		 23 						| Fylkesveg_forsterket vegoppmerking midt 			|		15023	 |	OK			| Kostra 23 - Fylkesveg med forsterket midtoppmerking.xlsx |
-| Støyskjermer og voller langs fylkesvei 			|   		 24 						| Fylkesveg med støyskjerm og voll 					|		15024	 |	OK			| Kostra 24 - Fylkesveg med støyskjerm og voll.xlsx |
+| Støyskjermer og voller langs fylkesvei 			|   		 24 						| Fylkesveg med støyskjerm og voll 					|		15024	 |	OK			| Kostra 24 - Fylkesveg med stoyskjerm og voll.xlsx |
 | Kollektivfelt langs fylkesveg 					|   		 25 						| Fylkesveg med kollektivfelt 						|		15025	 |	OK      	| Kostra 25 - Fylkesveg med kollektivfelt.xlsx |
 
 
@@ -145,6 +145,7 @@ Henter bruer av typen vegbru som overlapper med brukslasse, normaltransport som 
 
 
 ### Kostra 24 - Fylkesveg med støyskjerm og voll.xlsx 
+
 
 
 
