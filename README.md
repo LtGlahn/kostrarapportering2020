@@ -117,7 +117,7 @@ Rapport nummer 4, _"Fylkesveg med 4 felt", teller ikke med kryssdeler og sideanl
 
 ### Kostra 17
 
-
+Henter bruer av typene Vegbru og Bru i fylling. 
 
 ### Kostra 18 - Bruer under 10t
 
