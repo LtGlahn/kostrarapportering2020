@@ -52,7 +52,7 @@ Bortsett fra rapport nummer 1, _"Vegnett hele landet", som har lengde i kilomete
 
 ### Kostra 01 - Vegnett hele landet.xlsx			
 
-Rapport nummer 1, _"Vegnett hele landet", har lengde i kilometer. Her teller vi ikke gang- og sykkelveger, kun trafikantgruppe K (kjørende). Av typeVeg så teller vi med verdiene _kanalisertVeg, enkelBilveg, rampe, rundkjøring_ og _gatetun_ Vi teller ikke med sideanlegg, strekninger med adskilte løp=Mot og konnekteringslenker. Derimot teller vi alle kryssdeler. 
+Rapport nummer 1, _"Vegnett hele landet"_, har lengde i kilometer. Her teller vi ikke gang- og sykkelveger, kun trafikantgruppe K (kjørende). Av typeVeg så teller vi med verdiene _kanalisertVeg, enkelBilveg, rampe, rundkjøring_ og _gatetun_ Vi teller ikke med sideanlegg, strekninger med adskilte løp=Mot og konnekteringslenker. Derimot teller vi alle kryssdeler. 
 
 ### Kostra 02 - Fylkesveg med motorveg og motortrafikkveg.xlsx
 
@@ -69,18 +69,21 @@ Rapport nummer 4, _"Fylkesveg med 4 felt", teller ikke med kryssdeler og sideanl
 
 ### Kostra 05	
 
-
+Her finner vi lengden av _Bruksklasse, normaltransport (904)_ med de egenskapverdiene som tilsier maks aksellast under 10 tonn, langs fylkesveg for trafikantgruppe _kjørende_. Vi tar ikke med data for sideanlegg og _adskilte løp = Mot_. 
 
 ### Kostra 06		
 
+Her finner vi lengden av _Bruksklasse, normaltransport (904)_ langs fylkesveg med de egenskapverdiene som tilsier maks totalvekt under 50 tonn, for trafikantgruppe _kjørende_. Vi tar ikke med data for sideanlegg og _adskilte løp = Mot_. 
 
 
 ### Kostra 07		 
 
+Her finner vi lengden av _Fartsgrense (105)_ langs fylkesveg med de egenskapverdiene som tilsier maks kjøretøylengde kortere enn 1.5 meter, for trafikantgruppe _kjørende_. Vi tar ikke med data for sideanlegg og _adskilte løp = Mot_. 
 
 
 ### Kostra 08
 
+Her finner vi lengden av _Bruksklasse, normaltransport (904)_ langs fylkesveg med de egenskapverdiene som tilsier maks kjøretøylengde kortere enn 19.5 meter, for trafikantgruppe _kjørende_. Vi tar ikke med data for sideanlegg og _adskilte løp = Mot_. 
 
 
 ### Kostra 09
