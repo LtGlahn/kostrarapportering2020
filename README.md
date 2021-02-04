@@ -36,7 +36,7 @@ Bortsett fra rapport nummer 1, _"Vegnett hele landet", som har lengde i kilomete
 | Tunneler på fylkesveg. Antall 					|   		 14 						| Fylkesveg med antall tunnel 						| 		15014	 |				|				|
 | Tunneler på fylkesveg med lengde 500 m og over 	|   		 15 						| Fylkesveg med tunneler over 500 meter 			| 		15015	 |				|				|
 | Underganger på fylkesveg med høydebegrensning lavere enn 4 m | 16 						| Fylkesveg_tunneler med høyde lavere enn 4 meter 	| 		15016	 |				|				|
-| Vegbruer på fylkesveg 							|   		 17 						| Fylkesveg_antall bruer 							| 		15017	 |				|				|
+| Vegbruer på fylkesveg 							|   		 17 						| Fylkesveg_antall bruer 							| 		15017	 |				| Kostra 17 - Bruer fylkesveg.xlsx |
 | Bruer på fylkesvei med tillatt aksellast <10 tonn |   		 18 						| Fylkesveg_bruer under 10 tonn 					| 		15018	 |	OK			| Kostra 18 - Bruer under 10t.xlsx |
 | Bruer på fylkesvei med høydebegrensning <4m 		|   		 19 						| Fylkesveg_bruer_høyde mindre enn 4 meter 			| 		15019	 |	OK			| Kostra 19 - Bruer hoyde mindre enn 4m.xlsx |
 | Midtrekkverk på to og trefelts fylkesveger 		|   		 20 						| Fylkesveg_midtrekkverk 2-3 felter 				|		15020	 |				|  |

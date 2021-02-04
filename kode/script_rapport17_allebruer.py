@@ -30,6 +30,6 @@ bru_alleharLengde = pd.concat( [ bruGdf_medLengde, bruGdf_uLengde ]  )
 telling = bru_alleharLengde.groupby( ['fylke' ]).agg( { 'nvdbId': 'nunique', 'Lengde' : 'sum'} ).reset_index()
 telling.rename( columns={ 'nvdbId' : 'Antall', 'lengde' : 'Lengde (m)' }, inplace=True )
 
-skrivdataframe.skrivdf2xlsx( telling, '../../junk/Kostra 17 - Bruer på fylkesveg.xlsx', sheet_name='Bruer fylkesveg', metadata=mittfilter)
+skrivdataframe.skrivdf2xlsx( telling, '../../junk/Kostra 17 - Bruer fylkesveg.xlsx', sheet_name='Bruer fylkesveg', metadata=mittfilter)
 
 tidsbruk = datetime.now() - t0 
