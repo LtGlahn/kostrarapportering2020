@@ -23,6 +23,14 @@ myGdf.groupby( 'fylke' ).agg( { 'lengde' : 'sum' } ).astype('int')
 
 Resultatene herfra samsvamsvarer rimelig godt med data fra vårt nye produksjonssystem ["NVDB rapporter"](https://www.vegdata.no/produkter-og-tjenester/nvdb-rapporter/), som er det vi har brukt i leveransen av rapport nummer 24. 
 
+# Kartvisning 
+
+Kart er en helt nydelig måte å visualisere og feilsøke hva som skal eller ikke skal med i disse rapportene. Når data er holdt i strukturen [Geopandas Geodataframe](https://geopandas.org/) så er det superlettvint å dumpe ut resultater for bruk i GIS- og andre verktøy, for eksempel [QGIS](https://www.qgis.org/en/site/). 
+
+```
+myGdf.to_file( 'filnavn.gpkg', layer='navn paa lag', driver='GPKG')
+```
+
 
 
 
