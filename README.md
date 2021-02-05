@@ -1,9 +1,18 @@
 
 # Kostra-leveranse 2020 - et markert BRUDD med tidligere års rapportering
 
-Årets KOSTRA-rapport er i svært liten grad direkte sammenlignbar med tidligere rapporter. At vi har fått nye fylker er for så vidt håndterbart. 
+Årets KOSTRA-rapport fra Nasjonal vegdatabank (NVDB) er i svært liten grad direkte sammenlignbar med tidligere rapporter. At vi har fått nye fylker er for så vidt håndterbart. Verre er det at tallverdiene spriker på måter vi ikke klarer forklare. Dette ser vi tydelig på de nasjonale tallene, eller for de fylkene som ikke har endret seg etter 2019. Dette gjelder ikke alle rapporttypene, men mange av dem. 
 
-### Omlegging av rapportering
+Derfor bruker vi anledningen i 2021 til å erklære at vi nå starter en ny tidslinje med rapportering, og at direkte sammenligning med tidligere år kan gi svært misvisende konklusjoner. 
+
+Fokus for årets rapportproduksjon er at rapportene nå er 
+  * Dokumentert 
+  * Etterprøvbare (reproduserbare) - andre skal kunne ta våre regler og implementere dem. 
+  * Riktige, dvs at tallene gir en riktig oppsummering av datagrunnlaget.  
+
+Det er fremdeles fallgruver knyttet til sammenstilling av data fra NVDB. I tillegg blir oppsummeringene aldri bedre enn datagrunnlaget. Vi må derfor fremdeles ta forbehold om feil, både i datagrunlag og implementasjon.
+
+# Omlegging av rapportering
 
 Vi har hatt store omlegginger i NVDB, med både regionreform og nytt [referansesystem](https://www.vegdata.no/ofte-stilte-sporsmal/hva-ma-jeg-vite-om-vegsystemreferanse/) i Nasjonal vegdatabank. Tidligere rapportering er gjort med verktøyene  _"NVDB 123"_ og _"NVDB studio"_. Disse verktøyene bruker fremdeles 2019-fylkene, og saneres om noen måneder. 
 
@@ -13,22 +22,13 @@ Vi har bygget opp metodikk for å levere de samme rapporttypene som før, men se
   * Det gamle systemet gir få og svært begrensede muligheter til å grave i datagrunnlaget som inngår. Dermed er det vanskelig å få presis innsikt i hva som egentlig telles med i summeringene. 
   * Vi måtte jobbe internt med presise definsijoner på hva som regnes med av vegnettet.  
 
-I stedet for å prøve å gjenskape de samme tallverdiene (noe som neppe er mulig) har vi fokusert på å bygge nye metoder som teller _riktig, er godt dokumentert, etterprøvbart og reproduserbart_. Disse metodene bygger på styrkene til det nye referansesystemet og NVDB api versjon 3. 
+I stedet for å prøve å gjenskape de samme tallverdiene som før så har vi fokusert på å bygge nye metoder som teller _riktig, er godt dokumentert, etterprøvbart og reproduserbart_. Disse metodene bygger på styrkene til det nye referansesystemet og NVDB api versjon 3. 
 
 Vi tester ut og ettergår et [nytt produksjonssystem](https://www.vegdata.no/produkter-og-tjenester/nvdb-rapporter/) for leveranse av KOSTRA-rapporter fra NVDB. På grunn av begrensede ressurser har vi ikke kommet så langt med dette systemet som vi ønsker. Kun én rapport (Kostra 04 Fylkesveg med fire felt) er laget med det nye systemet. For de øvrige rapportene har vi ikke rukket justere rapportproduskjon i tråd med de nyeste definisjonene. Vi har heller ikke fått ettergått de øvrige rapporttypene grundig nok til at vi føler oss trygge på dem. 
 
-I stedet har vi brukt moderne analyseverktøy (python, pandas, geopandas) og implementert rapporteringene der. Dette var egentlig tenkt som verktøy for å teste det nye systemet, men det har vist seg godt egnet for rapportproduksjon. 
+I stedet har vi brukt moderne analyseverktøy (python, pandas, geopandas) og implementert rapporteringene der. Dette var egentlig tenkt som verktøy for å teste det nye systemet, men det har vist seg godt egnet for rapportproduksjon. I tillegg byr disse verktøyene på kraftfulle metoder for å grave oss ned i datagrunnlaget, kartproduksjon / GIS analyse med mere. 
 
-# Nye definisjoner - SKRIV MER! 
-
-Data er _*IKKE*_ kompatible med tidligere rapporter. BEGRUNNELSE 
-
-Lengder langs vegnett er medregnet kryssdeler, men ikke sideanlegg, og teller ikke med vegnett med _adskilte løp = "Mot"_ eller konnekteringslenker.  
-
-Bortsett fra rapport nummer 1, _"Vegnett hele landet", som har lengde i kilometer, er alle lengder oppgitt i meter. 
-
-
-
+# Årets versus fjorårets leveranse
 
 
 | Navn formell bestilling 							|  Nummer i 2019-leveransen    			| Navn 2019-leveransen / NVDB rapporter				| ID nytt system | Status 2020  | Filnavn 2020	|
@@ -63,7 +63,7 @@ Bortsett fra rapport nummer 1, _"Vegnett hele landet", som har lengde i kilomete
 
 # Merknader til de enkelte rapportene 
 
-Konnekteringslenker knytter sammen en sideveg og en hovedveg i et kryss, og utgjør typisk 5-15 meter mellom det punktet der sideveg møter hovedvegenes vegkant og senterlinja på hovedveg. Disse 5-15 metrene skal ikke regnes med når vi teller veglenger. De utgjør i snitt mindre enn 0.05% av vegnettet, men de er ujevnt fordelt. Konnekteringslenker inngår ikke når vi teller lengder av vegnett, men noen av lengdene nedenfor er opptelling av såkalte _fagdata_, dvs NVDB objekttyper som er _"limt oppå"_ vegnettet i NVDB. For disse klarer vi p.t. ikke skille ut konnekterinngslenkene. 
+Konnekteringslenker knytter sammen en sideveg og en hovedveg i et kryss, og utgjør typisk 5-15 meter mellom det punktet der sideveg møter hovedvegenes vegkant og senterlinja på hovedveg. Disse 5-15 metrene skal ikke regnes med når vi teller veglenger. De utgjør i snitt mindre enn 0.05% av vegnettet, men de er ujevnt fordelt. Konnekteringslenker inngår ikke når vi teller lengder av vegnett, men noen av lengdene nedenfor er opptelling av såkalte _fagdata_, dvs NVDB objekttyper som er _"limt oppå"_ vegnettet i NVDB. For disse klarer vi p.t. ikke skille ut konnekterinngslenkene når vi jobber med fagdata. 
 
 ### Kostra 01 - Vegnett hele landet
 
