@@ -48,7 +48,7 @@ Nedlasting av enkeltrapporter er ørlite grann mer plundrete, og krever at du na
 
 ### Filstruktur
 
-Årets leveranse ligger i mappen `kostraleveranse2020`. For sammenligning med fjoråret, samt debugging / utforskning av det nye rapportsystemet, har vi også inkludert en del rapporter i mappen `nvdbkostradump`. 
+Årets leveranse ligger i undermappen [`kostraleveranse2020`](https://github.com/LtGlahn/kostrarapportering2020/tree/main/kostraleveranse2020). For sammenligning med fjoråret, samt debugging / utforskning av det nye rapportsystemet, har vi også mapper med fjorårets leveranse og fra systemet "NVDB rapporter". Øvrige mapper inneholder kode og dokumentasjon. 
 
 
 # Årets versus fjorårets leveranse
@@ -117,7 +117,7 @@ Her finner vi lengden av _Bruksklasse, normaltransport (904)_ langs fylkesveg me
 
 ### Kostra 07 Fylkesveg med fartsgrense under 50 km/t. 
 
-Her finner vi lengden av _Fartsgrense (105)_ langs fylkesveg med de egenskapverdiene som tilsier maks kjøretøylengde kortere enn 1.5 meter, for trafikantgruppe _kjørende_. Vi tar ikke med data for sideanlegg og _adskilte løp = Mot_.
+Her finner vi lengden av _Fartsgrense (105)_ langs fylkesveg med de egenskapverdiene som tilsier fartgrense 50 kilometer i timen eller lavere, for trafikantgruppe _kjørende_. Vi tar ikke med data for sideanlegg og _adskilte løp = Mot_.
 
 
 ### Kostra 08 Fylkesveg med begrensing på kjøretøylengde mindre enn 19,5 meter
@@ -183,19 +183,19 @@ Her henter vi vegnett for vegkategorien "Fylkesveg" og  trafikantgruppe "G" (gå
 
 Dette er samme datagrunnlag som rapport 21, men i stedet for å oppsummere lengder per fylke så lagrer vi dataene på et GIS-vennlig format. Strengt tatt er vi forpliktet til å levere på SOSI-format for denen typen datautveksling. Dessverre er vi pga tidsnød ikke i stand til å løse gjenværende hindringer for lettvint produksjon av sosifiler med vegnett på det nye vegreferansesystemet. I stedet mener vi geojson er et greit alternativ. Vi kan også levere på andre formater - også sosi, gitt mere tid - bare si ifra.
 
-Den opprinnelige bestillingen er "gang- og sykkelveger innenfor tettsteder med mer enn 5000 innbyggere". Ettersom tettsteder er et datasett som ajourholdes av SSB ser vi det som mest hensiktsmessig at SSB selv gjør analysen med å finne hvor stor del av gang- og sykkelvegene som er innafor disse tettstedene. Dette er en triviell geografisk analyse. Hvis dette ikke er tilfredsstillende så ta kontakt, så skal vi ordne det. I så fall må vi få oversendt ferske data for tettsteder, evt få avklart at vi skal bruke siste gjeldende (per 31.12.2019, så vidt vi ser). 
+Den opprinnelige bestillingen er _"gang- og sykkelveger innenfor tettsteder med mer enn 5000 innbyggere"_. Ettersom tettsteder er et datasett som ajourholdes av SSB ser vi det som mest hensiktsmessig at SSB selv gjør analysen med å finne hvor stor del av gang- og sykkelvegene som er innafor disse tettstedene. Dette er en triviell geografisk analyse. Hvis dette ikke er tilfredsstillende så ta kontakt, så skal vi ordne det. I så fall må vi få oversendt ferske data for tettsteder, evt få avklart at vi skal bruke siste gjeldende (per 31.12.2019, så vidt vi ser). 
 
-### Kostra 23 - Fylkesveg med forsterket midtoppmerking.xlsx 
+### Kostra 23 - Fylkesveg med forsterket midtoppmerking
 
-Dette er telling av objekttypen "Vegoppmerking, forsterket" med egenskapsfilteret _Type = Forsterket midtoppmerking_ langs fylkesveg. 
+Dette er telling av objekttypen "Vegoppmerking, forsterket (836)" med egenskapsfilteret _Type = Forsterket midtoppmerking_ langs fylkesveg. 
 
-### Kostra 24 - Fylkesveg med støyskjerm og voll.xlsx 
+### Kostra 24 - Fylkesveg med støyskjerm og voll
 
 Dette er telling av objekttypene _Skjerm (3)_ med  egenskapen _Bruksområde = Stæyskjerm_ og _Voll (234)_ med egenskapen  _Bruksområde = Støyskjerming_ langs fylkesveg.
 
 ### Kostra 25 - Fylkesveg med kollektivfelt
 
-Her teller vi lengde av vegnettet for kjørende, slik som i rapporten Kostra 01 vegnett, men her teller vi kun med de strekningene der det finnes kollektivfelt.  
+Her teller vi lengde av vegnettet for kjørende, slik som i rapporten Kostra 01 vegnett, men i denne rapporten teller vi vi kun med de strekningene der det finnes kollektivfelt.  
 
 Vi ser at de eldre versjonene av Rapport nummer 25, _"Fylkesveg med kollektivfelt"_, så er det telt to ganger veglengden der kollektivfelt finnes på begge sider av vegen. Vi er usikre på hva som foretrekkes, og oppgir derfor begge deler, henholdsvis  _"Lengde en retning (m)"_ hvor vi kun teller hvorvidt det finnes kollektivfelt på strekningen, likegyldig hvor mange, og kolonnen _"Lengde per kollektivfelt (m)"_, hvor vi teller dobbelt opp hvis det finnes kollektivfelt på begge sider av vegen (dvs for begge retninger). 
 
