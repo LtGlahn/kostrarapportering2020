@@ -18,7 +18,7 @@ Jeg har laget 20 ulike script som lager de ulike rapportene. Ett av dem lager ra
 For rapporttype 24, _Fylkesveg med 4 felt_, har jeg ikke noe skript, men derimot en helt egen funksjon `firefeltrapport` i fila `nvdbapi-V3/nvdgeotricks.py`. Denne returnerer en geodataframe for firefelt i hele Norge, og ble brukt til en tidligere rapportering av nettopp dét. Kostra-rapportering for fylkesveg blir da 
 ```
 myGdf = nvdbgeotricks.firefeltrapport( mittfilter={'vegsystemreferanse' : 'Fv',  'tidspunkt' : '2020-12-31' })
-myGdf.groupby( 'fylke' ).agg( 'lengde' : 'sum').astype('int')
+myGdf.groupby( 'fylke' ).agg( { 'lengde' : 'sum' } ).astype('int')
 ```
 
 Resultatene herfra samsvamsvarer rimelig godt med data fra vårt nye produksjonssystem ["NVDB rapporter"](https://www.vegdata.no/produkter-og-tjenester/nvdb-rapporter/), som er det vi har brukt i leveransen av rapport nummer 24. 
