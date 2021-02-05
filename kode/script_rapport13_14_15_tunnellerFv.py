@@ -14,7 +14,7 @@ import nvdbgeotricks
 t0 = datetime.now()
 
 # Henter alle tunneler 
-mittfilter = lastnedvegnett.kostraFagdataFilter(  )
+mittfilter = lastnedvegnett.kostraFagdataFilter( mittfilter={}  )
 
 # Henter tunneller 
 sok = nvdbapiv3.nvdbFagdata( 581)
@@ -83,9 +83,17 @@ lop_harLengde.rename( columns=oversett, inplace=True )
 tunnelGdfV2 = pd.concat( [ harLengde, lop_manglerLengde[col], lop_harLengde[col] ] )
 
 
-telling = tunnelGdfV2.groupby( ['fylke' ]).agg( { 'nvdbId': 'nunique', 'Lengde, offisiell' : 'sum'} ).reset_index()
+
+telling = tunnelGdfV2.groupby( ['fylke' ]).agg( { 'nvdbId': 'nunique', 'Lengde, offisiell' : 'sum'} ).astype(int).reset_index()
+telling.rename( columns={ 'nvdbId' : 'Antall', 'Lengde, offisiell' : 'Lengde (m)' }, inplace=True )
+
+skrivdataframe.skrivdf2xlsx( telling, '../../output/Kostra 13 og 14 - tunnell fylkesveg.xlsx', sheet_name='Tunnel Fv', metadata=mittfilter)
+
+langeTunneller = tunnelGdfV2[ tunnelGdfV2['Lengde, offisiell'] >= 500 ]
+telling = langeTunneller.groupby( ['fylke' ]).agg( { 'nvdbId': 'nunique', 'Lengde, offisiell' : 'sum'} ).astype(int).reset_index()
 telling.rename( columns={ 'nvdbId' : 'Antall', 'Lengde, offisiell' : 'Lengde (m)' }, inplace=True )
 
 skrivdataframe.skrivdf2xlsx( telling, '../../output/Kostra 15 - tunnell lengre enn 500m.xlsx', sheet_name='Tunnel lengre enn 500m', metadata=mittfilter)
+
 
 tidsbruk = datetime.now() - t0 
