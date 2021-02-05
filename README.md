@@ -30,16 +30,26 @@ I stedet har vi brukt moderne analyseverktøy (python, pandas, geopandas) og imp
 
 # Nedlasting, årets leveranse
 
-Årets leveranse publiseres på github på adressen [https://github.com/LtGlahn/kostrarapportering2020](https://github.com/LtGlahn/kostrarapportering2020). På github kan du lettvint laste ned data med den grønne knappen _"Code" -> "Download ZIP"_ , plassert oppe til høyre. 
+
+Årets leveranse publiseres på github på adressen [https://github.com/LtGlahn/kostrarapportering2020](https://github.com/LtGlahn/kostrarapportering2020). På github kan du lettvint laste ned data med den grønne knappen _"Code" -> "Download ZIP"_ , plassert oppe til høyre.
+
+Eller bruk [denne lenken](https://github.com/LtGlahn/kostrarapportering2020/archive/main.zip) 
+
 
 ![Nedlasting, hele arkivet](./bilder/lastnedrepos.png)
 
-Nedlasting av enkeltrapporter er ørlite grann mer plundrete. 
+Nedlasting av enkeltrapporter er ørlite grann mer plundrete, og krever at du navigerer deg fram til riktig rapport, klikker på den og så kan du laste ned: 
   * Gå til mappen [kostraleveranse2020](https://github.com/LtGlahn/kostrarapportering2020/tree/main/kostraleveranse2020)
   * Klikk på en fil, for eksempel [Kostra 16 - tunnel u 4m.xlsx](https://github.com/LtGlahn/kostrarapportering2020/blob/main/kostraleveranse2020/Kostra%2016%20-%20tunnell%20u%204m.xlsx)
   * Klikk på _Download_ - knappen 
 
 ![Nedlasting, enkelt fil](./bilder/lastnedfil.png)  
+
+
+### Filstruktur
+
+Årets leveranse ligger i mappen `kostraleveranse2020`. For sammenligning med fjoråret, samt debugging / utforskning av det nye rapportsystemet, har vi også inkludert en del rapporter i mappen `nvdbkostradump`. 
+
 
 # Årets versus fjorårets leveranse
 
