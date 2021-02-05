@@ -1,10 +1,23 @@
 
-# Kostra-leveranse 2020
+# Kostra-leveranse 2020 - et markert BRUDD med tidligere års rapportering
 
+Årets KOSTRA-rapport er i svært liten grad direkte sammenlignbar med tidligere rapporter. At vi har fått nye fylker er for så vidt håndterbart. 
 
-# Årets leveranse - SKRIV MER! 
+### Omlegging av rapportering
 
-Vi tester ut og ettergår et [nytt produksjonssystem](https://www.vegdata.no/produkter-og-tjenester/nvdb-rapporter/) for leveranse av statistikk fra Nasjonal vegdatabank (NVDB). 
+Vi har hatt store omlegginger i NVDB, med både regionreform og nytt [referansesystem](https://www.vegdata.no/ofte-stilte-sporsmal/hva-ma-jeg-vite-om-vegsystemreferanse/) i Nasjonal vegdatabank. Tidligere rapportering er gjort med verktøyene  _"NVDB 123"_ og _"NVDB studio"_. Disse verktøyene bruker fremdeles 2019-fylkene, og saneres om noen måneder. 
+
+Vi har bygget opp metodikk for å levere de samme rapporttypene som før, men ser at tallmaterialet for i år avviker til dels mye med  forrige års rapport. Dette skyldes flere forhold: 
+  * håndteringen av _EnvegMed/EnvegMot_ i det gamle systemet er bare delvis er kompatibelt med _adskilte løp = Nei, Med_ eller _Mot_ i det nye.
+  * Det er krevende å skille ut kryssdeler og sideanlegg på en robust måte i det gamle systemet.
+  * Det gamle systemet gir få og svært begrensede muligheter til å grave i datagrunnlaget som inngår. Dermed er det vanskelig å få presis innsikt i hva som egentlig telles med i summeringene. 
+  * Vi måtte jobbe internt med presise definsijoner på hva som regnes med av vegnettet.  
+
+I stedet for å prøve å gjenskape de samme tallverdiene (noe som neppe er mulig) har vi fokusert på å bygge nye metoder som teller _riktig, er godt dokumentert, etterprøvbart og reproduserbart_. Disse metodene bygger på styrkene til det nye referansesystemet og NVDB api versjon 3. 
+
+Vi tester ut og ettergår et [nytt produksjonssystem](https://www.vegdata.no/produkter-og-tjenester/nvdb-rapporter/) for leveranse av KOSTRA-rapporter fra NVDB. På grunn av begrensede ressurser har vi ikke kommet så langt med dette systemet som vi ønsker. Kun én rapport (Kostra 04 Fylkesveg med fire felt) er laget med det nye systemet. For de øvrige rapportene har vi ikke rukket justere rapportproduskjon i tråd med de nyeste definisjonene. Vi har heller ikke fått ettergått de øvrige rapporttypene grundig nok til at vi føler oss trygge på dem. 
+
+I stedet har vi brukt moderne analyseverktøy (python, pandas, geopandas) og implementert rapporteringene der. Dette var egentlig tenkt som verktøy for å teste det nye systemet, men det har vist seg godt egnet for rapportproduksjon. 
 
 # Nye definisjoner - SKRIV MER! 
 
