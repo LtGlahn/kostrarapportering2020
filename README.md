@@ -137,6 +137,8 @@ Antall kjørefelt klassifiseres som en av _EttFelt, 2-3felt_ eller _mangefelt_, 
 
 Den versjonen vi synes får best frem intensjonen bak spørsmålet er fanen _"Midtrekkverk per vegnummer"_, der lengden også er gruppert per vår kjørefelt-gruppering (kolonnen _"kjfelt"_), i tillegg til per vegnummer og fylke. Her får vi tydelig fram hvilke veger som har lengre, sammenhengende strekninger med midtrekkverk (for eksempel Fv44 i Rogaland), og hvilke som kun har rekkverk knyttet til kryss, busslommer etc (for eksempel Fv113 i Viken, med 5 meter). 
 
+Videre er det en utfordring med _overlapp_: Det kan være satt opp mange rekkverk, for eksempel ett på hver side av en midtrabatt, eller mellom busslomme og hovedveg. Dette gir selvsagt "dobbelttelling" langs de delene av vegen der det finnes mer enn ett midtrekkverk eller midtdeler. 
+
 ### Kostra 21 gang og sykkelveg langs fylkesveg
 
 Her henter vi vegnett for vegkategorien "Fylkesveg" og  trafikantgruppe "G" (gående og syklende). 
@@ -155,9 +157,9 @@ Dette er telling av objekttypen "Vegoppmerking, forsterket" med egenskapsfiltere
 
 Dette er telling av objekttypene _Skjerm (3)_ med  egenskapen _Bruksområde = Stæyskjerm_ og _Voll (234)_ med egenskapen  _Bruksområde = Støyskjerming_ langs fylkesveg.
 
-
 ### Kostra 25 - Fylkesveg med kollektivfelt
 
-Rapport nummer 25, _"Fylkesveg med kollektivfelt", teller to ganger veglengden der kollektivfelt finnes på begge sider av vegen. 
+Her teller vi lengde av vegnettet for kjørende, slik som i rapporten Kostra 01 vegnett, men her teller vi kun med de strekningene der det finnes kollektivfelt.  
 
+Vi ser at de eldre versjonene av Rapport nummer 25, _"Fylkesveg med kollektivfelt"_, så er det telt to ganger veglengden der kollektivfelt finnes på begge sider av vegen. Vi er usikre på hva som foretrekkes, og oppgir derfor begge deler, henholdsvis  _"Lengde en retning (m)"_ hvor vi kun teller hvorvidt det finnes kollektivfelt på strekningen, likegyldig hvor mange, og kolonnen _"Lengde per kollektivfelt (m)"_, hvor vi teller dobbelt opp hvis det finnes kollektivfelt på begge sider av vegen (dvs for begge retninger). 
 
