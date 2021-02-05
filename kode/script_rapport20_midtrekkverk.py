@@ -121,7 +121,7 @@ kun23felt = myGdf[ myGdf['kjfelt'] == '2-3felt']
 telling2 = kun23felt.groupby( ['fylke' ]).agg( { 'segmentlengde' : 'sum'} ).astype(int).reset_index()  
 telling2.rename( columns={ 'segmentlengde' : 'Lengde midtrekkverk 2-3felt (m)' }, inplace=True)
 
-skrivdataframe.skrivdf2xlsx( [telling2,             telling,               lengde], '../../output/Kostra 20 - Midtrekkverk på to og trefelts Fv.xlsx', 
+skrivdataframe.skrivdf2xlsx( [telling2,             telling,               lengde], '../../output/Kostra 20 - Midtrekkverk to og trefelts Fv.xlsx', 
                 sheet_name=['Midtrekkverk 2-3felt', 'Alle midtrekkverk', 'Midtrekkverk per vegnummer'], metadata=mittfilter)
 
 tidsbruk = datetime.now() - t0 
