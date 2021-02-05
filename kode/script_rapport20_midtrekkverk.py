@@ -50,7 +50,7 @@ def finnAntallFelt( feiltoversikt ):
         print( 'Fikk rar datatype???', str( type( feiltoversikt )))
     return 'ukjent'
 
-egenskapfilter = 'egenskap(1248)=11789'
+egenskapfilter = 'egenskap(1248)=11788 OR egenskap(1248)=11789'
 
 
 mittfilter = lastnedvegnett.kostraFagdataFilter( mittfilter={} )

@@ -94,7 +94,7 @@ Her teller vi antall av _Høydebegrensning (591)_ med egenskapsfilteret _Type Hi
 
 ### Kostra 10 - IKKE I DENNE LEVERANSEN (fylkesveg med dårlig dekketilstand)
 
-Disse dataene finnes ikke i nasjonal vegdatbank, men i eget system for forvaltning av vegdekke. Vi forstår at dette er en separat leveranse; denne leveransen har kun data fra NVDB.
+_Disse dataene finnes ikke i nasjonal vegdatbank, men i eget system for forvaltning av vegdekke. Vi forstår at dette er en separat leveranse; denne leveransen har kun data fra NVDB._
 
 ### Kostra 11 Fylkesveg uten fast dekke med ÅDT høyere enn 5000 kjøretøy per døgn 
 
@@ -102,7 +102,7 @@ Vi har ingen forekomster med fylkesveger uten fast gresse (dvs objekttypen _Vegd
 
 ### Kostra 12
 
-Her teller vi objekttypen _Trafikkmengde (540)_ med egenskapverdien _ÅDT, total_ større enn 5000 kjøretøy per døgn. 
+Her teller vi objekttypen _Trafikkmengde (540)_ med egenskapverdien _ÅDT, total_ større enn 5000 kjøretøy per døgn langs fylkesveger. 
 
 ### Kostra 13 og 14 Tunneller på fylkesveg, antall og lengde
 
@@ -112,44 +112,48 @@ Her teller vi antall og samlet lengde for tunneler på fylkesveg. Analysen er en
 
 Samme metodikk som for kostra 13 og 14, men nå teller vi kun antall og lengde for de tunnellene som er lengre enn 500 meter.
 
-### Kostra 16
+### Kostra 16 Tunneller på fylkesveg med høyde under 4 meter
+
+Her finner vi objekttypene _Tunnel (581)_ og _Tunnelløp (67)_ som overlapper med objekttypen _Høydebegrensning (591)_ som har egenskapverdi _Skilta høyde_ lavere enn 4 meter. For å finne lengden av tunneller bruker vi samme metode som Kostra 13, 14 og 15. 
+
+### Kostra 17 Bruer langs fylkesveg
+
+Her finner vi antall og lengde av objekttypen _Bru (60)_ som har egenskap _Brukategori = Vegbru_ eller  _Bru i fylling_. 
+
+### Kostra 18 - Bruer under 10t langs fylkesveg
+
+Her finner vi antall og lengde langs fylkesveg av objekttypen _Bru (60)_ som har egenskap _Brukategori = Vegbru_ og overlapper med objekttypen _Brukslasse, normaltransport (904)_ med egenskapverdier som angir tillatt aksellast lavere enn 10 tonn. 
 
 
+### Kostra 19 - Bruer med høydebegrensning lavere enn 4 meter
 
-### Kostra 17
-
-Henter bruer av typene Vegbru og Bru i fylling. 
-
-### Kostra 18 - Bruer under 10t
-
-Henter bruer av typen vegbru som overlapper med brukslasse, normaltransport som har tillatt aksellast lavere enn 10 tonn på fylkesveg. 
-
-
-### Kostra 19 - Bruer hoyde mindre enn 4m.xlsx 
-
-
+Her finner vi antall og lengde langs fylkesveg av objekttypen _Bru (60)_ som har egenskap _Brukategori = Vegbru_ og overlapper med objekttypen _Høydebegrensning (591)_ med egenskapverdi _Skilta høyde_ lavere enn 4 meter.
 
 ### Kostra 20 Mindtrekkverk på to og trefelts fylkesveger
 
-Objekttypen _Rekkverk (5)_ med egenskapen _Bruksområde = Midtrekkverk_ langs fylkesveger der vi har to eller tre kjørefelt. Det er littegrann komplisert å koble sammen antall kjørefelt fra vegnettet med 
+Objekttypen _Rekkverk (5)_ med egenskapen _Bruksområde = Midtrekkverk_ eller _Midtdeler_  langs fylkesveger der vi har to eller tre kjørefelt. Det er littegrann komplisert å koble sammen antall kjørefelt fra vegnettet med data om midtrekkverk, men nå har vi laget gode, gjenbrukbare oppskrifter. 
+
+Antall kjørefelt klassifiseres som en av _EttFelt, 2-3felt_ eller _mangefelt_, samt _ukjent_ for de veglenkene som mangler egenskapen _feltoversikt_. I rapporten angir vi først det som etterspørres: Lengde midtrekkverk og midtdeler på to- og trefeltsveg (fanen _"Midtrekkverk 2-3felt"_). I tillegg angir vi lengden av alle midtrekkverk og -delere i fanen _"Alle midtrekkverk"_. 
+
+Den versjonen vi synes får best frem intensjonen bak spørsmålet er fanen _"Midtrekkverk per vegnummer"_, der lengden også er gruppert per vår kjørefelt-gruppering (kolonnen _"kjfelt"_), i tillegg til per vegnummer og fylke. Her får vi tydelig fram hvilke veger som har lengre, sammenhengende strekninger med midtrekkverk (for eksempel Fv44 i Rogaland), og hvilke som kun har rekkverk knyttet til kryss, busslommer etc (for eksempel Fv113 i Viken, med 5 meter). 
 
 ### Kostra 21 gang og sykkelveg langs fylkesveg
 
-
+Her henter vi vegnett for vegkategorien "Fylkesveg" og  trafikantgruppe "G" (gående og syklende). 
 
 ### Kostra 22 Gang og sykkelveg langs fylkesveg i tettsteder med mer enn 5000 innbyggere
 
-Vi har dessverre ikke fått på plass alt som trengs for å lettvint produsere sosifiler med det nye vegreferansesystemet. Vi betrakter geojson som et lettvint alternativ i mellomtiden. Vi kan også levere på andre formater. 
+Dette er samme datagrunnlag som rapport 21, men i stedet for å oppsummere lengder per fylke så lagrer vi dataene på et GIS-vennlig format. Strengt tatt er vi forpliktet til å levere på SOSI-format for denen typen datautveksling. Dessverre er vi pga tidsnød ikke i stand til å løse gjenværende hindringer for lettvint produksjon av sosifiler med vegnett på det nye vegreferansesystemet. I stedet mener vi geojson er et greit alternativ. Vi kan også levere på andre formater - også sosi, gitt mere tid - bare si ifra.
 
-Den opprinnelige bestillingen er "gang- og sykkelveger innenfor tettsteder med mer enn 5000 innbyggere". Ettersom tettsteder er et datasett som ajourholdes av SSB ser vi det som mest hensiktsmessig at SSB selv gjør analysen med å finne hvor stor del av gang- og sykkelvegene som er innafor disse tettstedene. Dette er en triviell geografisk analyse. Hvis dette ikke er tilfredsstillende så ta kontakt, så skal vi ordne det. I så fall må vi få oversendt ferske data for tettsteder, evt få avklart at vi skal bruke siste gjeldende. Så vidt vi kan se, er de siste offentlige tilgjengelige tettsted-definisjonene per 31.12.2019. 
+Den opprinnelige bestillingen er "gang- og sykkelveger innenfor tettsteder med mer enn 5000 innbyggere". Ettersom tettsteder er et datasett som ajourholdes av SSB ser vi det som mest hensiktsmessig at SSB selv gjør analysen med å finne hvor stor del av gang- og sykkelvegene som er innafor disse tettstedene. Dette er en triviell geografisk analyse. Hvis dette ikke er tilfredsstillende så ta kontakt, så skal vi ordne det. I så fall må vi få oversendt ferske data for tettsteder, evt få avklart at vi skal bruke siste gjeldende (per 31.12.2019, så vidt vi ser). 
 
 ### Kostra 23 - Fylkesveg med forsterket midtoppmerking.xlsx 
 
-Dette er telling av objekttypen "Vegoppmerking, forsterket" med egenskapsfilteret _Type = Forsterket midtoppmerking_. 
+Dette er telling av objekttypen "Vegoppmerking, forsterket" med egenskapsfilteret _Type = Forsterket midtoppmerking_ langs fylkesveg. 
 
 ### Kostra 24 - Fylkesveg med støyskjerm og voll.xlsx 
 
-Henter skjerm med egenskapsfilter _Bruksområde = Stæyskjerm_ og Voll med egenskapfilter _Bruksområde = Støyskjerming_. 
+Dette er telling av objekttypene _Skjerm (3)_ med  egenskapen _Bruksområde = Stæyskjerm_ og _Voll (234)_ med egenskapen  _Bruksområde = Støyskjerming_ langs fylkesveg.
 
 
 ### Kostra 25 - Fylkesveg med kollektivfelt
