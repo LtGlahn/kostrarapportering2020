@@ -12,7 +12,7 @@ Fokus for årets rapportproduksjon er at rapportene nå er
 
 Det er fremdeles fallgruver knyttet til sammenstilling av data fra NVDB. I tillegg blir oppsummeringene aldri bedre enn datagrunnlaget. Vi må derfor fremdeles ta forbehold om feil, både i datagrunlag og implementasjon.
 
-# Omlegging av rapportering
+# Hvorfor har vi brudd?
 
 Vi har hatt store omlegginger i NVDB, med både regionreform og nytt [referansesystem](https://www.vegdata.no/ofte-stilte-sporsmal/hva-ma-jeg-vite-om-vegsystemreferanse/) i Nasjonal vegdatabank. Tidligere rapportering er gjort med verktøyene  _"NVDB 123"_ og _"NVDB studio"_. Disse verktøyene bruker fremdeles 2019-fylkene, og saneres om noen måneder. 
 
@@ -27,6 +27,19 @@ I stedet for å prøve å gjenskape de samme tallverdiene som før så har vi fo
 Vi tester ut og ettergår et [nytt produksjonssystem](https://www.vegdata.no/produkter-og-tjenester/nvdb-rapporter/) for leveranse av KOSTRA-rapporter fra NVDB. På grunn av begrensede ressurser har vi ikke kommet så langt med dette systemet som vi ønsker. Kun én rapport (Kostra 04 Fylkesveg med fire felt) er laget med det nye systemet. For de øvrige rapportene har vi ikke rukket justere rapportproduskjon i tråd med de nyeste definisjonene. Vi har heller ikke fått ettergått de øvrige rapporttypene grundig nok til at vi føler oss trygge på dem. 
 
 I stedet har vi brukt moderne analyseverktøy (python, pandas, geopandas) og implementert rapporteringene der. Dette var egentlig tenkt som verktøy for å teste det nye systemet, men det har vist seg godt egnet for rapportproduksjon. I tillegg byr disse verktøyene på kraftfulle metoder for å grave oss ned i datagrunnlaget, kartproduksjon / GIS analyse med mere. 
+
+# Nedlasting, årets leveranse
+
+Årets leveranse publiseres på github på adressen [https://github.com/LtGlahn/kostrarapportering2020](https://github.com/LtGlahn/kostrarapportering2020). På github kan du lettvint laste ned data med den grønne knappen _"Code" -> "Download ZIP"_ , plassert oppe til høyre. 
+
+![Nedlasting, hele arkivet](./bilder/lastnedrepos.png)
+
+Nedlasting av enkeltrapporter er ørlite grann mer plundrete. 
+  * Gå til mappen [kostraleveranse2020](https://github.com/LtGlahn/kostrarapportering2020/tree/main/kostraleveranse2020)
+  * Klikk på en fil, for eksempel [Kostra 16 - tunnel u 4m.xlsx](https://github.com/LtGlahn/kostrarapportering2020/blob/main/kostraleveranse2020/Kostra%2016%20-%20tunnell%20u%204m.xlsx)
+  * Klikk på _Download_ - knappen 
+
+![Nedlasting, enkelt fil](./bilder/lastnedfil.png)  
 
 # Årets versus fjorårets leveranse
 
