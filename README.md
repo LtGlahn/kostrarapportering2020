@@ -76,7 +76,7 @@ Nedlasting av enkeltrapporter er ørlite grann mer plundrete, og krever at du na
 | Bruer på fylkesvei med tillatt aksellast <10 tonn |                           18 | Fylkesveg_bruer under 10 tonn                                   |    15018	      |	OK                     | Kostra 18 - Bruer under 10t.xlsx |
 | Bruer på fylkesvei med høydebegrensning <4m       |                           19 | Fylkesveg_bruer_høyde mindre enn 4 meter                        | 		15019	      |	OK                     | Kostra 19 - Bruer hoyde mindre enn 4m.xlsx |
 | Midtrekkverk på to og trefelts fylkesveger 		    |   		                    20 | Fylkesveg_midtrekkverk 2-3 felter                               |		15020	      |	OK                     | Kostra 20 - Midtrekkverk på to og trefelts Fv.xlsx |
-| Gang- og sykkelveger (statlig eller fylkeskommunalt ansvar) langs fylkesveg | 21 | Gang-og sykkelveger                                             |    15021 	    |	OK                     | Kostra 21 gang og sykkelveg.xlsx |
+| Gang- og sykkelveger (statlig eller fylkeskommunalt ansvar) langs fylkesveg | 21 | Gang-og sykkelveger                                             |    15021 	    |	OK  (NB, kun Fv)       | Kostra 21 gang og sykkelveg.xlsx |
 | Gang- og sykkelveg i byer/tettsteder >5000 innbyggere (SOSI format)         | 22 |                                                                 |			 	        | Ikke sosi, men geojson | Kostra 22 - sykkelveger_fylkesveg.zip |
 | Forsterket midtoppmerking (rumlefelt), på fylkesveg                         | 23 | Fylkesveg_forsterket vegoppmerking midt                         |		15023	      |	OK                     | Kostra 23 - Fylkesveg med forsterket midtoppmerking.xlsx |
 | Støyskjermer og voller langs fylkesvei 			      |                           24 | Fylkesveg med støyskjerm og voll                                |		15024	      |	OK                     | Kostra 24 - Fylkesveg med stoyskjerm og voll.xlsx |
@@ -175,7 +175,7 @@ Den versjonen vi synes får best frem intensjonen bak spørsmålet er fanen _"Mi
 
 Videre er det en utfordring med _overlapp_: Det kan være satt opp mange rekkverk, for eksempel ett på hver side av en midtrabatt, eller mellom busslomme og hovedveg. Dette gir selvsagt "dobbelttelling" langs de delene av vegen der det finnes mer enn ett midtrekkverk eller midtdeler. 
 
-### Kostra 21 gang og sykkelveg langs fylkesveg
+### Kostra 21 gang og sykkelveg for fylkesveger
 
 Her henter vi vegnett for vegkategorien "Fylkesveg" og  trafikantgruppe "G" (gående og syklende). 
 
