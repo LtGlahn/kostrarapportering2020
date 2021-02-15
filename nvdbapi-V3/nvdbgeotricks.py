@@ -208,9 +208,19 @@ def vegnett2gdf( mittfilter={}):
         vegsegment['geometri']      = vegsegment['geometri']['wkt']
         vegsegment['vref']          = vegsegment['vegsystemreferanse']['kortform']
         vegsegment['vegnr']         = vegsegment['vref'].split()[0]
-        vegsegment['adskilte løp']  = vegsegment['vegsystemreferanse']['strekning']['adskilte_løp']
         vegsegment['vegkategori']   = vegsegment['vref'][0]
-        vegsegment['trafikantgruppe']  = vegsegment['vegsystemreferanse']['strekning']['trafikantgruppe']
+        if 'adskilte løp' in vegsegment['vegsystemreferanse']['strekning']: 
+            vegsegment['adskilte løp']  = vegsegment['vegsystemreferanse']['strekning']['adskilte_løp']
+
+        if 'trafikantgruppe' in vegsegment['vegsystemreferanse']['strekning']: 
+            vegsegment['trafikantgruppe']  = vegsegment['vegsystemreferanse']['strekning']['trafikantgruppe']
+
+
+        if 'medium' in vegsegment['geometri']:
+            vegsegment['medium'] = vegsegment['geometri']['medium']
+
+        if 'lengde' in vegsegment['geometri']:
+            vegsegment['lengde'] = vegsegment['geometri']['lengde']
 
         data.append( vegsegment )
 
