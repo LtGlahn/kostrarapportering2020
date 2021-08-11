@@ -37,7 +37,8 @@ t0 = datetime.now()
 
 
 mittfilter = { 'historisk': 'true', 'tidspunkt': '2020-12-31'   }
-mittfilter['vegsystemreferanse'] = 'Ev,Rv,Fv,Kv,Sv,Pv'
+# mittfilter['vegsystemreferanse'] = 'Ev,Rv,Fv,Kv,Sv,Pv'
+mittfilter['vegsystemreferanse'] = 'Ev,Rv'
 mittfilter['trafikantgruppe'] = 'G'
 
 sok = nvdbapiv3.nvdbVegnett()
@@ -50,16 +51,15 @@ minGdf = gpd.GeoDataFrame( mindf, geometry='geometry', crs=5973 )
 
 
 # minGdf = nvdbgeotricks.vegnett2gdf( mittfilter=mittfilter )
-minGdf.to_file( 'vegnetthelelandet.gpkg', layer='sykkelnorge', driver='GPKG')
+minGdf.to_file( 'ekstratall.gpkg', layer='sykkel_e_r', driver='GPKG')
 
 
-# minGdf  = gpd.read_file( 'vegnetthelelandet.gpkg', layer='sykkelnorge')
+# minGdf  = gpd.read_file( 'ekstratall.gpkg', layer='sykkel_e_r')
 # lastnedvegnett.rapport01_medsykkel_gdf2excel( myGdf, filnavn='../kostraleveranse2020/Kostra 01 sykkel hele landet.xlsx', metadata=mittfilter)
 
 minGdf['lengde'] = minGdf['lengde'] / 1000
 lengdeCol = 'Lengde gang og sykkel (km)'
 minGdf.rename( columns = {'lengde' :  lengdeCol }, inplace=True )
-
 
 
 tellingFylke            = minGdf.groupby( ['fylke', 'trafikantgruppe' ]).agg( { lengdeCol : 'sum'} ).astype(int).reset_index()
@@ -68,9 +68,12 @@ tellingFylkeVegtype     = minGdf.groupby( ['fylke', 'trafikantgruppe', 'typeVeg'
 tellingKommune          = minGdf.groupby( ['kommune', 'trafikantgruppe' ]).agg( { lengdeCol : 'sum'} ).astype(int).reset_index()
  
 
-skrivdataframe.skrivdf2xlsx(  [ tellingFylke,   tellingVegtype,         tellingFylkeVegtype,        tellingKommune  ], '../Lengde gang og sykkelveg.xlsx', 
+skrivdataframe.skrivdf2xlsx(  [ tellingFylke,   tellingVegtype,         tellingFylkeVegtype,        tellingKommune  ], '../Lengde gang og sykkelveg E R.xlsx', 
                 sheet_name=[ 'G og S per fylke', 'G og S per vegtype', 'G og S per fylke og vegtype', 'G og S per kommune'  ], metadata=mittfilter)
 
 
 tidsbruk = datetime.now() - t0 
 print( "Tidsbruk:", tidsbruk, "sekund" )
+
+print( "Lengde gang og sykkel", round( minGdf[lengdeCol].sum()), 'km'  )
+# Lengde gang og sykkel 1572 km
